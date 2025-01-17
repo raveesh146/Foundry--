@@ -1,20 +1,10 @@
 // SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.13;
+import "node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-contract Counter {
-    uint public count ;
+contract RavCoin is ERC20 {
 
-    constructor(uint _count){
-        count = _count;
+    constructor(uint _value)ERC20("RavCoin","RC") {
     }
-
-    function increment() public {
-        count++;
-    }
-    
-    function decrement() public {
-        count--;
-    }
-
 
 }
